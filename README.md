@@ -6,12 +6,15 @@
 
 This is the repo for the Unity VR project, which aims to build and share an instruction-following XRInteraction Toolkit. The repo contains:
 
-- The [XRInteraction Toolkit](https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@2.4/manual/index.html) used for interaction system for creating a VR experience.
+## Table of Contents
+
+- The [XRInteraction Toolkit](https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@2.4/manual/index.html) used for interaction system for creating -a VR experience.
 - The [XR Plugin Management](https://docs.unity3d.com/Manual/com.unity.xr.management.html) that provides simple management of XR plug-ins.
-- The code for [continos movement](#overview).
-- The code for climbing locomotion.
-- The code for controllers.
-- The code for interactables.
+- The code for [continos movement](#continuos-movement).
+- The code for [climbing locomotion](#climbing-locomotion).
+- The code for [controllers](#controllers).
+- The code for [interactables](#interactables).
+- [Author](https://github.com/enesbunyamincelik).
 
 Note: I really appreciate Valem for preparing this amazing [Tutorial Series](https://www.youtube.com/playlist?list=PLrk7hDwk64-a_gf7mBBduQb3PEBYnG4fU) years ago.
 
