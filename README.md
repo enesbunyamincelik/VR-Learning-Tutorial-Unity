@@ -2,7 +2,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Made with Unity](https://img.shields.io/badge/Made%20with-Unity-57b9d3.svg?style=plastic&logo=unity)](https://unity3d.com)
-Unity 2020.3.19f1 Version - C#
+
 
 This is the repo for the Unity VR project, which aims to build and share an instruction-following XRInteraction Toolkit. The repo contains:
 
