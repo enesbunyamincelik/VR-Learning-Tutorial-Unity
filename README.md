@@ -10,7 +10,7 @@ This is the repo for the Unity VR project, which aims to build and share an intr
 - The code for [climbing locomotion](#climbing-locomotion).
 - The code for [controllers](#controllers).
 - The code for [interactables](#interactables).
-- [Author](https://github.com/enesbunyamincelik).
+- [Author: Enes Bünyamin Çelik](https://github.com/enesbunyamincelik).
 
 ## Overview 
 
