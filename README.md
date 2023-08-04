@@ -16,8 +16,6 @@ This is the repo for the Unity VR project, which aims to build and share an inst
 - The code for [interactables](#interactables).
 - [Author](https://github.com/enesbunyamincelik).
 
-Note: I really appreciate Valem for preparing this amazing [Tutorial Series](https://www.youtube.com/playlist?list=PLrk7hDwk64-a_gf7mBBduQb3PEBYnG4fU) years ago.
-
 ## Overview 
 
 The tutorial series introduces VR development in Unity. It covers topics like object grabbing, physics, locomotion systems, collider components, object interaction using rays, handling UI elements, distant object interaction, player movement, teleportation etc. Those who know the fundementals of Unity can work on VR development easily.
@@ -41,3 +39,5 @@ Note: This project is still under development.
 
 
 ### Author: [Enes Bünyamin Çelik](https://github.com/enesbunyamincelik)
+
+Note: I really appreciate Valem for preparing this amazing [Tutorial Series](https://www.youtube.com/playlist?list=PLrk7hDwk64-a_gf7mBBduQb3PEBYnG4fU) years ago.
