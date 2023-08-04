@@ -12,5 +12,5 @@ This is the repo for the Unity VR project, which aims to build and share an inst
 - The code for controllers.
 - The code for interactables.
 
-Note: I really appreciate Valem for preparing this amazing [tutorial series](https://www.youtube.com/playlist?list=PLrk7hDwk64-a_gf7mBBduQb3PEBYnG4fU) years ago.
+Note: I really appreciate Valem for preparing this amazing [Tutorial Series](https://www.youtube.com/playlist?list=PLrk7hDwk64-a_gf7mBBduQb3PEBYnG4fU) years ago.
 
