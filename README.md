@@ -57,8 +57,8 @@ Overall, this script coordinates climbing movement by collecting velocities from
 
 6. **Update Method:** This method runs every frame and does the following for each teleport controller:
 
-- It checks if the teleport controller exists (leftTeleportRay or rightTeleportRay).
-- If the ray from the corresponding hand's XRRayInteractor is hitting something (isLeftInteractorRayHovering or isRightInteractorRayHovering), it won't show the teleport visualization.
+- It checks if the teleport controller exists `leftTeleportRay` or `rightTeleportRay`.
+- If the ray from the corresponding hand's `XRRayInteractor` is hitting something (`isLeftInteractorRayHovering` or `isRightInteractorRayHovering`), it won't show the teleport visualization.
 - If the teleport is enabled for the hand and the activation button is pressed more than the threshold, it shows the teleport visualization.
 
 7. **CheckIfActivated Method:** This method takes an `ActionBasedController` as input (representing a VR controller) and checks if the button designated as the teleport activation button is pressed beyond the set threshold.
