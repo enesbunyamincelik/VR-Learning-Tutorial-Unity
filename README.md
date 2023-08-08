@@ -8,7 +8,7 @@ This is the repo for the Unity VR project, which aims to build and share an intr
 - The [XRInteraction Toolkit](https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@2.4/manual/index.html) used for interaction system for creating -a VR experience.
 - The [XR Plugin Management](https://docs.unity3d.com/Manual/com.unity.xr.management.html) that provides simple management of XR plug-ins.
 - The code for [climbing locomotion](#climbing-locomotion).
-- The code for [controllers](#controllers).
+- The code for [controllers](#locomotion-controller).
 - The code for [interactables](#interactables).
 - Author: [Enes Bünyamin Çelik](https://github.com/enesbunyamincelik).
 
@@ -43,9 +43,27 @@ Note: This project is still under development.
 Overall, this script coordinates climbing movement by collecting velocities from hand controllers, applying them to the player's position, and managing the state of climbing. It's an important part of creating a climbing mechanic in a VR experience.
 
 
-## Controllers
+## Locomotion Controller
 
+1. **Controller Setup:** The script defines two properties `leftTeleportRay` and `rightTeleportRay` representing left and right teleport controllers. These are hand controllers that players use in VR.
 
+2. **Teleport Activation Button:** `teleportActivationButton` determines which button triggers teleportation. It's set in the Unity Inspector and represents a button on the VR controller.
+
+3. **Activation Threshold:** `activationTreshold` sets how much the activation button needs to be pressed before teleportation triggers. Smaller values make teleportation easier to trigger.
+
+4. **Ray Interactors:** `leftInteractorRay` and `rightInteractorRay` are ray interactors used for hit detection. These are components that help detect where the ìnteractor ray hits in the scene to configure if the ray interacting with a UI element or an interactable object. 
+
+5. **Teleport Enable Flags:** `EnableLeftTeleport` and `EnableRightTeleport` are properties that allow enabling/disabling teleportation for each hand separately.
+
+6. **Update Method:** This method runs every frame and does the following for each teleport controller:
+
+- It checks if the teleport controller exists (leftTeleportRay or rightTeleportRay).
+- If the ray from the corresponding hand's XRRayInteractor is hitting something (isLeftInteractorRayHovering or isRightInteractorRayHovering), it won't show the teleport visualization.
+- If the teleport is enabled for the hand and the activation button is pressed more than the threshold, it shows the teleport visualization.
+
+7. **CheckIfActivated Method:** This method takes an `ActionBasedController` as input (representing a VR controller) and checks if the button designated as the teleport activation button is pressed beyond the set threshold.
+
+In simple terms, this script manages teleportation visualization for both left and right hands based on button presses and hit detection. If the activation button is pressed and the teleport isn't blocked by other interactions, the teleport visualization appears. If you disable teleportation for a hand, the visualization won't show for that hand.
 
 ## Interactables
 
