@@ -22,23 +22,23 @@ Note: This project is still under development.
 
 1. **CharacterController Setup:** The code starts by defining a `CharacterController` variable named `characterController`. This is the component that handles character movement and collision detection.
 
-2. **Awake Method:** The Awake method is overridden and it calls a custom method FindCharacterController. This method checks if a CharacterController is assigned. If not, it tries to find it from the xrOrigin (which is likely the VR camera's parent object).
+2. **Awake Method:** The Awake method is overridden and it calls a custom method `FindCharacterController`. This method checks if a `CharacterController` is assigned. If not, it tries to find it from the `xrOrigin` (which is likely the VR camera's parent object).
 
-3. **Velocity Management:** The script manages a list of VelocityContainer objects named activateVelocities. These containers likely hold velocity information from the VR hand controllers.
+3. **Velocity Management:** The script manages a list of `VelocityContainer` objects named `activateVelocities`. These containers hold velocity information from the VR hand controllers.
 
-4. **Adding and Removing Providers:** The script provides methods (AddProvider and RemoveProvider) to add and remove velocity providers (likely the hand controllers). It prevents duplicate entries in the list.
+4. **Adding and Removing Providers:** The script provides methods (AddProvider and RemoveProvider) to add and remove velocity providers of the hand controllers. It prevents duplicate entries in the list.
 
-5. **Update Method:** The Update method runs every frame and manages climbing logic.
+5. **Update Method:** The `Update` method runs every frame and manages climbing logic.
 
-6. **Begin Climb:** It checks if climbing is possible (CanClimb) and if so, it calls BeginLocomotion to initiate climbing.
+6. **Begin Climb:** It checks if climbing is possible `CanClimb` and if so, it calls `BeginLocomotion` to initiate climbing.
 
-7. **End Climb:** If climbing is ongoing and not possible anymore, it calls EndLocomotion to stop climbing.
+7. **End Climb:** If climbing is ongoing and not possible anymore, it calls `EndLocomotion` to stop climbing.
 
 8. **CanClimb Method:** Checks if there are any active velocity providers (hand controllers). If there are, it returns true.
 
 9. **ApplyVelocity Method:** If climbing is ongoing, this method collects the total velocity from the active providers and applies it to the player's position.
 
-10. **CollectControllerVelocity Method:** Loops through the activateVelocities list and adds up all the individual velocities from the providers.
+10. **CollectControllerVelocity Method:** Loops through the `activateVelocities` list and adds up all the individual velocities from the providers.
 
 Overall, this script coordinates climbing movement by collecting velocities from hand controllers, applying them to the player's position, and managing the state of climbing. It's an important part of creating a climbing mechanic in a VR experience.
 
