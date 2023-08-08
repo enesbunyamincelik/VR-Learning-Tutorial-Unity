@@ -20,7 +20,7 @@ Note: This project is still under development.
 
 ## Climbing Locomotion
 
-1. **CharacterController Setup:** The code starts by defining a CharacterController variable named characterController. This is the component that handles character movement and collision detection.
+1. **CharacterController Setup:** The code starts by defining a `CharacterController` variable named `characterController`. This is the component that handles character movement and collision detection.
 
 2. **Awake Method:** The Awake method is overridden and it calls a custom method FindCharacterController. This method checks if a CharacterController is assigned. If not, it tries to find it from the xrOrigin (which is likely the VR camera's parent object).
 
