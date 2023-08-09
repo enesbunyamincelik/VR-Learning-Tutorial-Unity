@@ -8,7 +8,7 @@ This is the repo for the Unity VR project, which aims to build and share an intr
 - The [XRInteraction Toolkit](https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@2.4/manual/index.html) used for interaction system for creating -a VR experience.
 - The [XR Plugin Management](https://docs.unity3d.com/Manual/com.unity.xr.management.html) that provides simple management of XR plug-ins.
 - The code for [climbing locomotion](#climbing-locomotion).
-- The code for [controllers](#locomotion-controller).
+- The code for [locomotion cpntroller](#locomotion-controller).
 - The code for [interactables](#interactables).
 - Author: [Enes Bünyamin Çelik](https://github.com/enesbunyamincelik).
 
