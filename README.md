@@ -7,9 +7,9 @@ This is the repo for the Unity VR project, which aims to build and share an intr
 
 - The [XRInteraction Toolkit](https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@2.4/manual/index.html) used for interaction system for creating -a VR experience.
 - The [XR Plugin Management](https://docs.unity3d.com/Manual/com.unity.xr.management.html) that provides simple management of XR plug-ins.
-- The code for [climbing locomotion](#climbing-locomotion).
-- The code for [locomotion controller](#locomotion-controller).
-- The code for [interactables](#interactables).
+- The code for [Climbing Locomotion](#climbing-locomotion).
+- The code for [Locomotion Controller](#locomotion-controller).
+- The code for [Two Hand Grab Interactable](#two-hand-grab-interactable).
 - Author: [Enes Bünyamin Çelik](https://github.com/enesbunyamincelik).
 
 ## Overview 
@@ -65,7 +65,7 @@ Overall, this script coordinates climbing movement by collecting velocities from
 
 In simple terms, this script manages teleportation visualization for both left and right hands based on button presses and hit detection. If the activation button is pressed and the teleport isn't blocked by other interactions, the teleport visualization appears. If you disable teleportation for a hand, the visualization won't show for that hand.
 
-## Interactables
+## Two Hand Grab Interactable
 
 <details>
 <summary> <strong> Using the script </strong> </summary>
