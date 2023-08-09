@@ -67,6 +67,8 @@ In simple terms, this script manages teleportation visualization for both left a
 
 ## Interactables
 
+We use `TwoHandGrabInteractable` script to provide two hand interaction to an object. We added two box collider to the object we want to grab and deleted the meshes in order not to see them:  
+![M4_Carbine.png](M4_Carbine.png)
 
 
 ### Author: [Enes Bünyamin Çelik](https://github.com/enesbunyamincelik)
