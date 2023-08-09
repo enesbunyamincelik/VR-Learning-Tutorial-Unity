@@ -76,9 +76,38 @@ In simple terms, this script manages teleportation visualization for both left a
 
 </details>
 
+1. **Variables Setup:**
+- It defines a list of second-hand grab points `XRSimpleInteractable` and configuration options for two-hand grabbing.
+- You can choose between rotation types for two hands from Unity inspector: None (no rotation), First (only the first hand rotates), and Second (only the second hand rotates).
+- The `snapToSecondHand` flag determines if the object snaps to the second hand's rotation.
+
+2. **Event Listeners Setup:**
+- In the Start method, the script sets up event listeners for each second-hand grab point's `onSelectEntered` and `onSelectExited` events.
+
+3. **Rotation Calculation:**
+-The `ProcessInteractable` method calculates the object's rotation based on the two-hand rotation type.
+If `snapToSecondHand` is true, the object's rotation follows the second hand's rotation; otherwise, it combines the second hand's rotation with an initial offset.
+
+5. **GetTwoHandRotation Function:**
+- This function calculates the target rotation based on the chosen rotation type.
+- It uses the `LookRotation` method to compute a rotation that aligns with the direction between the two hands.
+
+6. **Two-Hand Grab Handling:**
+- When the second hand is grabbed `OnSecondHandGrabbed`, the script stores the initial rotation offset to achieve smooth rotation.
+- When the second hand is released `OnSecondHandRelease`, the second interactor reference is cleared.
+
+7. **First Hand Grab Handling:**
+- When the first hand is grabbed `OnSelectEntered`, the initial rotation of the first hand is stored.
+
+8. **First Hand Release Handling:**
+When the first hand is released `OnSelectExited`, the second interactor reference is cleared, and the initial rotation is restored.
+
+9. **Selectable Check:**
+- The `IsSelectableBy` method checks if the object can be selected by an interactor.
+- It ensures that the object is selectable only if it's not already grabbed by another hand.
+
 [//]: # (![M4_Carbine]&#40;Assets/README/M4_Carbine.png| width=100&#41;)
 [<img src="Assets/README/M4_Carbine.png" width="750" />](./Assets/README/M4_Carbine.png)
-
 
 ### Author: [Enes Bünyamin Çelik](https://github.com/enesbunyamincelik)
 
