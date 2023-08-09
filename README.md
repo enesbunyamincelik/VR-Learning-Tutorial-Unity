@@ -67,7 +67,14 @@ In simple terms, this script manages teleportation visualization for both left a
 
 ## Interactables
 
-We use `TwoHandGrabInteractable` script to provide two hand interaction to an object. We added two box collider to the object we want to grab and deleted the meshes in order not to see them:  
+<details>
+<summary> <strong> Using the script </strong> </summary>
+
+1. We use `TwoHandGrabInteractable` script to provide two hand interaction to an object. 
+2. We added two box collider to the object we want to grab and deleted the meshes in order not to see them.
+3. We unchecked the Is Trigger event from Unity inspector to ensure the colliders are sticked to the object and not fall.
+
+</details>
 
 [//]: # (![M4_Carbine]&#40;Assets/README/M4_Carbine.png| width=100&#41;)
 [<img src="Assets/README/M4_Carbine.png" width="750" />](./Assets/README/M4_Carbine.png)
