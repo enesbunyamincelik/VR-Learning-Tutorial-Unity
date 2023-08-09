@@ -7,9 +7,9 @@ This is the repo for the Unity VR project, which aims to build and share an intr
 
 - The [XRInteraction Toolkit](https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@2.4/manual/index.html) used for interaction system for creating -a VR experience.
 - The [XR Plugin Management](https://docs.unity3d.com/Manual/com.unity.xr.management.html) that provides simple management of XR plug-ins.
-- The code for [climbing locomotion](#climbing-locomotion).
-- The code for [locomotion controller](#locomotion-controller).
-- The code for [interactables](#interactables).
+- The code for [Climbing Locomotion](#climbing-locomotion).
+- The code for [Locomotion Controller](#locomotion-controller).
+- The code for [Two Hand Grab Interactable](#two-hand-grab-interactable).
 - Author: [Enes Bünyamin Çelik](https://github.com/enesbunyamincelik).
 
 ## Overview 
@@ -65,11 +65,49 @@ Overall, this script coordinates climbing movement by collecting velocities from
 
 In simple terms, this script manages teleportation visualization for both left and right hands based on button presses and hit detection. If the activation button is pressed and the teleport isn't blocked by other interactions, the teleport visualization appears. If you disable teleportation for a hand, the visualization won't show for that hand.
 
-## Interactables
+## Two Hand Grab Interactable
 
-We use `TwoHandGrabInteractable` script to provide two hand interaction to an object. We added two box collider to the object we want to grab and deleted the meshes in order not to see them:  
-![M4_Carbine.png](M4_Carbine.png)
+<details>
+<summary> <strong> Using the script </strong> </summary>
 
+1. We use `TwoHandGrabInteractable` script to provide two hand interaction to an object. 
+2. We added two box collider to the object we want to grab and deleted the meshes in order not to see them.
+3. We unchecked the Is Trigger event from Unity inspector to ensure the colliders are sticked to the object and not fall.
+
+</details>
+
+1. **Variables Setup:**
+- It defines a list of second-hand grab points `XRSimpleInteractable` and configuration options for two-hand grabbing.
+- You can choose between rotation types for two hands from Unity inspector: None (no rotation), First (only the first hand rotates), and Second (only the second hand rotates).
+- The `snapToSecondHand` flag determines if the object snaps to the second hand's rotation.
+
+2. **Event Listeners Setup:**
+- In the Start method, the script sets up event listeners for each second-hand grab point's `onSelectEntered` and `onSelectExited` events.
+
+3. **Rotation Calculation:**
+-The `ProcessInteractable` method calculates the object's rotation based on the two-hand rotation type.
+If `snapToSecondHand` is true, the object's rotation follows the second hand's rotation; otherwise, it combines the second hand's rotation with an initial offset.
+
+5. **GetTwoHandRotation Function:**
+- This function calculates the target rotation based on the chosen rotation type.
+- It uses the `LookRotation` method to compute a rotation that aligns with the direction between the two hands.
+
+6. **Two-Hand Grab Handling:**
+- When the second hand is grabbed `OnSecondHandGrabbed`, the script stores the initial rotation offset to achieve smooth rotation.
+- When the second hand is released `OnSecondHandRelease`, the second interactor reference is cleared.
+
+7. **First Hand Grab Handling:**
+- When the first hand is grabbed `OnSelectEntered`, the initial rotation of the first hand is stored.
+
+8. **First Hand Release Handling:**
+When the first hand is released `OnSelectExited`, the second interactor reference is cleared, and the initial rotation is restored.
+
+9. **Selectable Check:**
+- The `IsSelectableBy` method checks if the object can be selected by an interactor.
+- It ensures that the object is selectable only if it's not already grabbed by another hand.
+
+[//]: # (![M4_Carbine]&#40;Assets/README/M4_Carbine.png| width=100&#41;)
+[<img src="Assets/README/M4_Carbine.png" width="750" />](./Assets/README/M4_Carbine.png)
 
 ### Author: [Enes Bünyamin Çelik](https://github.com/enesbunyamincelik)
 
