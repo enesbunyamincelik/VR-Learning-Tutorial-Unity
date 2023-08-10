@@ -2,7 +2,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Made with Unity](https://img.shields.io/badge/Made%20with-Unity-57b9d3.svg?style=flat&logo=unity)](https://unity3d.com)
-[![Generic badge](https://img.shields.io/badge/<Made-with-C#>-<COLOR>.svg)](https://shields.io/)
+[![Generic badge](https://img.shields.io/badge/Made-with-C#-<COLOR>.svg)](https://shields.io/)
 
 This is the repo for the Unity VR project, which aims to build and share an introduction to Unity virtual reality. The repo contains:
 
