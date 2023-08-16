@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 
-public class TwoHandGrabInteractable : XRGrabInteractable
+public class TwoHandGrabInteractable : XRGrabInteractable 
 {
     public List<XRSimpleInteractable> secondHandGrabPoints = new List<XRSimpleInteractable>();
     public enum TwoHandRotationType { None, First, Second  };
@@ -23,7 +23,6 @@ public class TwoHandGrabInteractable : XRGrabInteractable
             item.onSelectExited.AddListener(OnSecondHandRelease);
         }
     }
-
 
     [System.Obsolete]
 #pragma warning disable CS0809 // Eski üye eski olmayan üyeyi geçersiz kýlar
