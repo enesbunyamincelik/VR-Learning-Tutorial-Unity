@@ -109,7 +109,3 @@ When the first hand is released `OnSelectExited`, the second interactor referenc
 
 [//]: # (![M4_Carbine]&#40;Assets/README/M4_Carbine.png| width=100&#41;)
 [<img src="Assets/README/M4_Carbine.png" width="750" />](./Assets/README/M4_Carbine.png)
-
-### Author: [Enes Bünyamin Çelik](https://github.com/enesbunyamincelik)
-
-Note: I really appreciate Valem for preparing this amazing [Tutorial Series](https://www.youtube.com/playlist?list=PLrk7hDwk64-a_gf7mBBduQb3PEBYnG4fU) years ago.
